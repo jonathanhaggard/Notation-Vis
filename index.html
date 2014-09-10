@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Notation Vis</title>
+		<style>
+		body {
+		    background-color: #fff;
+		    margin: 0;
+		    padding: 0;
+		    display: flex;
+		    height: 100vh;
+		}
+		.sheet{
+			width: 775px;
+			height: 170px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -377px;
+			margin-top: -85px;
+		}
+		#waveform { 
+		    align-self: center;
+		    justify-content: center;
+		    margin: 0 auto;
+		    transform: translateX(23px) translateY(-5px);
+		}
+		</style>
+	</head>
+	<body>
+
+		<audio id="audio" controls="controls" style="display: none;">
+			<source src="song.ogg" type="audio/ogg" />
+			<source src="song.mp3" type="audio/mpeg; codecs='mp3'" />
+		</audio>
+		<div id="loading" style="display: none;">Loading . . .</div>
+		<canvas id="waveform" height="100" width="735"></canvas>
+		<img src="images/sheet.svg" alt="" class="sheet"/>
+		<!-- Dancer.js -->
+		<script src="js/dancer.js"></script>
+		<script src="js/support.js"></script>
+		<script src="js/kick.js"></script>
+		<script src="js/adapterWebAudio.js"></script>
+		<script src="js/adapterMoz.js"></script>
+		<script src="js/adapterFlash.js"></script>
+		<script src="js/fft.js"></script>
+		<script src="js/flash_detect.js"></script>
+		<script src="js/dancer.fft.js"></script>
+		<script src="js/dancer.waveform.js"></script>
+
+		<!-- Demo stuff -->
+		<script src="js/player.js"></script>
+	</body>
+</html>
